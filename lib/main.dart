@@ -7,6 +7,7 @@ import 'package:english_words/english_words.dart';
 import 'package:charts_flutter/flutter.dart' as charts;
 import 'MyChart.dart';
 import 'MySeries.dart';
+import 'DropDownMenu.dart';
 
 void main() => runApp(MyApp());
 
@@ -33,6 +34,7 @@ class ProfileViewState extends State<ProfileView> {
       body: _buildBody(context),
     );
   }
+
   //Solo para testear
   Widget _testStar() {
     return Icon(
@@ -40,6 +42,7 @@ class ProfileViewState extends State<ProfileView> {
       color: Colors.red[200],
     );
   }
+
   //La lista de prueba de datos para la grafica
   final List<MySeries> testList = [
     MySeries(
@@ -60,7 +63,6 @@ class ProfileViewState extends State<ProfileView> {
         number: 6),
   ];
 
-
   //Pinta el container con la imagen del nino y su info
   Widget _buildInfoNino(BuildContext context) {
     return Container(
@@ -78,20 +80,7 @@ class ProfileViewState extends State<ProfileView> {
                 ),
               ],
             ),
-            //Info del nino
-            Column(
-              children: <Widget>[
-                Row(
-                  children: <Widget>[Text("Juanito", style: TextStyle(fontSize: 26))],
-                ),
-                Row(
-                  children: <Widget>[Text('Edad: ' + "20" + ' Meses')],
-                ),
-                Row(
-                  children: <Widget>[Text('Peso: ' + "10" + 'Kg')],
-                ),
-              ],
-            ),
+            Column(children: <Widget>[DropDownMenu()]),
           ],
         ));
   }
