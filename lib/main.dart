@@ -60,6 +60,7 @@ class ProfileViewState extends State<ProfileView> {
         number: 6),
   ];
 
+
   //Pinta el container con la imagen del nino y su info
   Widget _buildInfoNino(BuildContext context) {
     return Container(
