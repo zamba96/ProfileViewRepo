@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Startup Name Generator',
+      title: '0A5',
       home: ProfileView(),
     );
   }
@@ -33,14 +33,14 @@ class ProfileViewState extends State<ProfileView> {
       body: _buildBody(context),
     );
   }
-
+  //Solo para testear
   Widget _testStar() {
     return Icon(
       Icons.star,
       color: Colors.red[200],
     );
   }
-
+  //La lista de prueba de datos para la grafica
   final List<MySeries> testList = [
     MySeries(
         category: "Cognitivo",
@@ -100,6 +100,7 @@ class ProfileViewState extends State<ProfileView> {
   BoxShadow boxShadow2 = BoxShadow(
       color: Colors.black54, blurRadius: 4.0, offset: Offset(1.75, 1.75));
 
+  //Construye el counter de actividades, donde dice cuantas va y que porcentaje
   Widget _buildCounterActividades(BuildContext context) {
     return Container(
         decoration: BoxDecoration(

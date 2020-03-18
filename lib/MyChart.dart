@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'MySeries.dart';
 import 'package:charts_flutter/flutter.dart' as charts;
 
+//Esta clase es una abstraccion de alto nivel de una grafica de barras
 class MyBarChart extends StatelessWidget {
   final List<MySeries> data;
 
@@ -20,12 +21,8 @@ class MyBarChart extends StatelessWidget {
         measureLowerBoundFn: (MySeries series, _) => 0,
       ),
     ];
-
-    BoxShadow boxShadow2 = BoxShadow(
-      color: Colors.black54, blurRadius: 10.0, offset: Offset(1.75, 1.75));
-
+    //Retorna el container con la grafica
     return Container(
-        //decoration: BoxDecoration(boxShadow: [boxShadow2]),
         height: 300,
         margin: EdgeInsets.all(10.0),
         child: Card(
